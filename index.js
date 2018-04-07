@@ -18,7 +18,7 @@ module.exports.addToBetaUserList = function(event, context, callback) {
   const body = JSON.parse(event.body);
   const auth = {
     username: "kilgarenone",
-    password: "21a805e3ca737390f3793e8ab3952f56-us12" //process.env.MAILCHIMP_API_KEY
+    password: process.env.MAILCHIMP_API_KEY
   };
   const user = {
     email_address: body.emailAddress,
